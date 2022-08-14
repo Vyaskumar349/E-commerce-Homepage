@@ -3,6 +3,7 @@ import React from 'react';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
+
 import styled from 'styled-components';
 
 
@@ -83,6 +84,9 @@ const ProductItem = ({item}) => {
         </Icon>
         <Icon>
         <FavoriteBorderOutlinedIcon/>
+        </Icon>
+        <Icon>
+       
         </Icon>
         </Info>
     </Container>

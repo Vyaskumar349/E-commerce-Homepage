@@ -7,22 +7,33 @@ import PinterestIcon from '@mui/icons-material/Pinterest';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import MailIcon from '@mui/icons-material/Mail';
+import { mobile, others } from '../responsive';
 
 const Container=styled.div`
-display:flex;`
+display:flex;
+${mobile({flexDirection:"column"})}
+${others({flexDirection:"column"})}
+`
+
+
+
 const Left=styled.div`
 flex:1;
 display:flex;
 flex-direction:column;
-padding:20px;`
+padding:20px;
+
+`
 
 const Center=styled.div`
 flex:1;
 padding:20px; 
+${mobile({display:"none"})}
 `
 const Right=styled.div`
 flex:1;
-margin:20px;`
+padding:20px;
+${mobile({backgroundColor:"#eee"})}`
 
 const Logo=styled.h1`
 font-weight:bold;`
@@ -71,7 +82,7 @@ const Footer = () => {
 
         <Left>
         <Logo>
-                CART&BUY.
+                DHUKAAN
             </Logo>
             <Desc>
         This is a project developed by Jangapalli Vyaskumar in 2022

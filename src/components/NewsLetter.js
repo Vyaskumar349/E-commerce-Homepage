@@ -2,6 +2,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import SendIcon from '@mui/icons-material/Send';
+import { mobile } from '../responsive';
+import {tablet,others} from '../responsive'
 
 const Container=styled.div`
 height:60vh;
@@ -14,10 +16,14 @@ flex-direction:column;`
 const Title=styled.h1`
 font-size:70px;
 margin-bottom:20px;`
+
 const Desc=styled.p`
 font-size:24px;
 font-weight:300;
-margin-bottom:20px;`
+margin-bottom:20px;
+${mobile({textAlign:"center"})}
+${others({textAlign:"center"})}
+`
 
 const InputContainer=styled.div`
 width:50%;
@@ -26,6 +32,9 @@ background-color:white;
 display:flex;
 justify-content:space-between;
 border:1px solid lightgray;
+${mobile({width:"80%"})}
+${tablet({width:"80%"})}
+${others({width:"80%"})}
 `
 const Input=styled.input`
 border:none;
@@ -41,7 +50,7 @@ const NewsLetter = () => {
   return (
     <Container>
         <Title>NewsLetter</Title>
-        <Desc>Get timely updates from yout favorite products</Desc>
+        <Desc>Get timely updates from your favorite products</Desc>
         <InputContainer>
         <Input placeholder='your email'/>
         <Button>

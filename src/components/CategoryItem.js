@@ -1,16 +1,19 @@
 import styled from 'styled-components'
 import React from 'react'
-
+import { mobile } from '../responsive'
 const Container=styled.div`
 height:70vh;
 width:100vw;
 margin:3px;
 position:relative;
+
+${mobile({height:"30vh"})}
 `
 const Image=styled.img`
 width:100%;
 height:100%;
 object-fit:cover;
+${mobile({height:"30vh"})}
  `
  const Info=styled.div`
  position:absolute;

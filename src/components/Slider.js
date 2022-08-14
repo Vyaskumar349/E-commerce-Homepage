@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import ArrowBackIosOutlinedIcon from '@mui/icons-material/ArrowBackIosOutlined';
 import ArrowForwardIosOutlinedIcon from '@mui/icons-material/ArrowForwardIosOutlined';
 import { SliderItems } from '../data';
+import { mobile } from '../responsive';
+import  { tablet,others } from '../responsive';
 
 
 const Container=styled.div`
@@ -12,6 +14,11 @@ background-color:white;
 display:flex;
 position:relative;
 overflow:hidden;
+${mobile({display:"none"})}
+${tablet({height:"80vh"})}
+
+
+
 `
 
 const Arrow=styled.div`
@@ -50,16 +57,22 @@ background-color:${props=>props.bg};
 const Image=styled.img`
 height:90%;
 padding:40px;
+
 `
 
 const ImageContainer=styled.div`
 flex:1;
-height:100%;`
+height:100%;
+${tablet({display:"none"})}
+${others({display:"none"})}
+`
 
 const InfoContainer=styled.div`
 flex:1;
 padding:25px;
-width:100%;`
+width:100%;
+${tablet({display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"})}
+`
 
 const Title=styled.h1`
 font-size:70px;`
@@ -74,7 +87,9 @@ const Button=styled.button`
 padding:10px;
 font-size:20px;
 background-color:transparent;
-cursor:pointer;`
+cursor:pointer;
+
+`
 
 const Slider = () => {
    const [sliderIndex,setSliderIndex]=useState(0);
